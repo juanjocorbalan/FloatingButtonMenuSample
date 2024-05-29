@@ -12,6 +12,9 @@
 		DFA11FE22C07AB4100CE10E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFA11FE12C07AB4100CE10E0 /* Assets.xcassets */; };
 		DFA11FE52C07AB4200CE10E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFA11FE42C07AB4200CE10E0 /* Preview Assets.xcassets */; };
 		DFA11FEC2C07AB8900CE10E0 /* SampleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA11FEB2C07AB8900CE10E0 /* SampleListView.swift */; };
+		DFA11FEE2C07ACA500CE10E0 /* FloatingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA11FED2C07ACA500CE10E0 /* FloatingButtonView.swift */; };
+		DFA11FF02C07AE0700CE10E0 /* FloatingButtonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA11FEF2C07AE0700CE10E0 /* FloatingButtonAction.swift */; };
+		DFA11FF22C07AE3600CE10E0 /* FloatingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA11FF12C07AE3600CE10E0 /* FloatingButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		DFA11FE12C07AB4100CE10E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFA11FE42C07AB4200CE10E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DFA11FEB2C07AB8900CE10E0 /* SampleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleListView.swift; sourceTree = "<group>"; };
+		DFA11FED2C07ACA500CE10E0 /* FloatingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonView.swift; sourceTree = "<group>"; };
+		DFA11FEF2C07AE0700CE10E0 /* FloatingButtonAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonAction.swift; sourceTree = "<group>"; };
+		DFA11FF12C07AE3600CE10E0 /* FloatingButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 				DFA11FDD2C07AB4000CE10E0 /* FloatingButtonMenuSampleApp.swift */,
 				DFA11FDF2C07AB4000CE10E0 /* ContentView.swift */,
 				DFA11FEB2C07AB8900CE10E0 /* SampleListView.swift */,
+				DFA11FED2C07ACA500CE10E0 /* FloatingButtonView.swift */,
+				DFA11FEF2C07AE0700CE10E0 /* FloatingButtonAction.swift */,
+				DFA11FF12C07AE3600CE10E0 /* FloatingButtonStyle.swift */,
 				DFA11FE12C07AB4100CE10E0 /* Assets.xcassets */,
 				DFA11FE32C07AB4200CE10E0 /* Preview Content */,
 			);
@@ -141,8 +150,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFA11FE02C07AB4000CE10E0 /* ContentView.swift in Sources */,
+				DFA11FF02C07AE0700CE10E0 /* FloatingButtonAction.swift in Sources */,
 				DFA11FEC2C07AB8900CE10E0 /* SampleListView.swift in Sources */,
+				DFA11FEE2C07ACA500CE10E0 /* FloatingButtonView.swift in Sources */,
 				DFA11FDE2C07AB4000CE10E0 /* FloatingButtonMenuSampleApp.swift in Sources */,
+				DFA11FF22C07AE3600CE10E0 /* FloatingButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

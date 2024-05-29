@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             SampleListView(backgroundColor: backgroundColor)
-                .toolbarTitleDisplayMode(.inline)
+                .navigationBarTitleDisplayMode(.inline)
                 .navigationTitle("Floating Button Menu")
         }
     }
