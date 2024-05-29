@@ -15,6 +15,7 @@
 		DFA11FEE2C07ACA500CE10E0 /* FloatingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA11FED2C07ACA500CE10E0 /* FloatingButtonView.swift */; };
 		DFA11FF02C07AE0700CE10E0 /* FloatingButtonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA11FEF2C07AE0700CE10E0 /* FloatingButtonAction.swift */; };
 		DFA11FF22C07AE3600CE10E0 /* FloatingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA11FF12C07AE3600CE10E0 /* FloatingButtonStyle.swift */; };
+		DFA11FF42C07B43C00CE10E0 /* FloatingButtonMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA11FF32C07B43C00CE10E0 /* FloatingButtonMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		DFA11FED2C07ACA500CE10E0 /* FloatingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonView.swift; sourceTree = "<group>"; };
 		DFA11FEF2C07AE0700CE10E0 /* FloatingButtonAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonAction.swift; sourceTree = "<group>"; };
 		DFA11FF12C07AE3600CE10E0 /* FloatingButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonStyle.swift; sourceTree = "<group>"; };
+		DFA11FF32C07B43C00CE10E0 /* FloatingButtonMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonMenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				DFA11FDF2C07AB4000CE10E0 /* ContentView.swift */,
 				DFA11FEB2C07AB8900CE10E0 /* SampleListView.swift */,
 				DFA11FED2C07ACA500CE10E0 /* FloatingButtonView.swift */,
+				DFA11FF32C07B43C00CE10E0 /* FloatingButtonMenuView.swift */,
 				DFA11FEF2C07AE0700CE10E0 /* FloatingButtonAction.swift */,
 				DFA11FF12C07AE3600CE10E0 /* FloatingButtonStyle.swift */,
 				DFA11FE12C07AB4100CE10E0 /* Assets.xcassets */,
@@ -153,6 +156,7 @@
 				DFA11FF02C07AE0700CE10E0 /* FloatingButtonAction.swift in Sources */,
 				DFA11FEC2C07AB8900CE10E0 /* SampleListView.swift in Sources */,
 				DFA11FEE2C07ACA500CE10E0 /* FloatingButtonView.swift in Sources */,
+				DFA11FF42C07B43C00CE10E0 /* FloatingButtonMenuView.swift in Sources */,
 				DFA11FDE2C07AB4000CE10E0 /* FloatingButtonMenuSampleApp.swift in Sources */,
 				DFA11FF22C07AE3600CE10E0 /* FloatingButtonStyle.swift in Sources */,
 			);

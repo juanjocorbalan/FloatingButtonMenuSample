@@ -16,6 +16,13 @@ struct ContentView: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationTitle("Floating Button Menu")
         }
+        .overlay {
+            FloatingButtonView(actions:
+                                [ FloatingMenuAction(symbol: "moon"),
+                                  FloatingMenuAction(symbol: "sun.max")
+                                ]
+            )
+        }
     }
 }
 

@@ -9,49 +9,18 @@ import SwiftUI
 
 struct FloatingButtonView: View {
     @State private var isExpanded = false
-    private var buttonSize = CGSize(width: 60, height: 60)
+    var size: CGFloat
     var actions: [FloatingMenuAction]
-    @Environment(\.colorScheme) private var schema
 
-    init(actions: [FloatingMenuAction]) {
+    init(size: CGFloat = 65, actions: [FloatingMenuAction]) {
+        self.size = size
         self.actions = actions
     }
 
     var body: some View {
         GeometryReader { proxy in
             ZStack(alignment: .bottom) {
-                Capsule()
-                    .fill(.secondary)
-                    .frame(width: buttonSize.width,
-                           height: isExpanded
-                           ? CGFloat(actions.count + 1) * (buttonSize.height + 20)
-                           : buttonSize.height)
-                    .overlay {
-                        if isExpanded {
-                            VStack(spacing: 20) {
-                                ForEach(actions) { action in
-                                    Button(action: {
-                                        withAnimation(.snappy) {
-                                            action.action?()
-                                            isExpanded.toggle()
-                                        }
-                                    }, label: {
-                                        Image(systemName: action.symbol)
-                                            .frame(width: buttonSize.width, height: buttonSize.height)
-                                            .foregroundStyle(action.foregroundColor)
-                                            .font(.title)
-                                            .symbolVariant(.fill)
-
-                                    })
-                                    .buttonStyle(FloatingButtonStyle())
-                                }
-                            }
-                            .frame(maxHeight: .infinity, alignment: .top)
-                            .padding(.top, 20)
-                            .transition(.asymmetric(insertion: .push(from: .bottom), removal: .push(from: .top)))
-                        }
-                    }
-                    .clipped()
+                FloatingButtonMenuView(isExpanded: $isExpanded, size: size, actions: actions)
 
                 Button(action: {
                     withAnimation(.snappy) {
@@ -59,18 +28,13 @@ struct FloatingButtonView: View {
                     }
                 }, label: {
                     Image(systemName: isExpanded ? "plus" : "line.3.horizontal")
-                        .frame(width: buttonSize.width, height: buttonSize.height)
-                        .foregroundStyle(schema == .dark ? .black : .white)
-                        .font(.largeTitle.bold())
-                        .background(schema == .dark ? .white : .black)
-                        .clipShape(.circle)
-                        .shadow(color: .gray, radius: 8, x: 6, y: 6)
+                        .frame(width: size, height: size)
                         .rotationEffect(isExpanded ? .degrees(45) : .zero)
-                        .scaleEffect(isExpanded ? 1.15 : 1)
                 })
                 .buttonStyle(FloatingButtonStyle())
+                .scaleEffect(isExpanded ? 1.2 : 1)
             }
-            .padding()
+            .padding(.trailing, 24)
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
         }
     }
@@ -78,8 +42,8 @@ struct FloatingButtonView: View {
 
 #Preview {
     FloatingButtonView(actions:
-                        [ FloatingMenuAction(symbol: "moon"),
-                          FloatingMenuAction(symbol: "sun.max")
+                        [ FloatingMenuAction(symbol: "sun.max") { print("sun") },
+                          FloatingMenuAction(symbol: "moon") { print("moon") }
                         ]
     )
 }
