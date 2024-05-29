@@ -29,9 +29,11 @@ struct FloatingButtonMenuView: View {
                     VStack(spacing: 10) {
                         ForEach(actions) { action in
                             Button(action: {
-                                withAnimation(.snappy) {
-                                    action.action?()
+                                withAnimation(.snappy(duration: 0.3)) {
                                     isExpanded.toggle()
+                                }
+                                withAnimation(.snappy(duration: 0.3).delay(0.3)) {
+                                    action.action?()
                                 }
                             }, label: {
                                 Image(systemName: action.symbol)

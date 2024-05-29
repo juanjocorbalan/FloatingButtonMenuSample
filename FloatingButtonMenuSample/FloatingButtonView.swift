@@ -24,7 +24,7 @@ struct FloatingButtonView: View {
                 FloatingButtonMenuView(isExpanded: $isExpanded, size: size, actions: actions)
 
                 Button(action: {
-                    withAnimation(.snappy) {
+                    withAnimation(.snappy(duration: 0.3)) {
                         isExpanded.toggle()
                     }
                 }, label: {
