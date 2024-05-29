@@ -21,10 +21,12 @@ struct FloatingButtonMenuView: View {
     var body: some View {
         Capsule()
             .fill(.secondary)
-            .frame(width: size, height: isExpanded ? CGFloat(actions.count + 1) * (size + 20) : size)
+            .frame(width: size, height: isExpanded
+                   ? CGFloat(actions.count + 1) * (size + 10) + 20
+                   : size)
             .overlay {
                 if isExpanded {
-                    VStack(spacing: 15) {
+                    VStack(spacing: 10) {
                         ForEach(actions) { action in
                             Button(action: {
                                 withAnimation(.snappy) {

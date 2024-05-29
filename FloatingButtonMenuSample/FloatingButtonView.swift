@@ -12,9 +12,10 @@ struct FloatingButtonView: View {
     var size: CGFloat
     var actions: [FloatingMenuAction]
 
-    init(size: CGFloat = 65, actions: [FloatingMenuAction]) {
+    init(size: CGFloat = 65,
+         @FloatingMenuActionResultBuilder actions: () -> [FloatingMenuAction]) {
         self.size = size
-        self.actions = actions
+        self.actions = actions()
     }
 
     var body: some View {
@@ -41,9 +42,8 @@ struct FloatingButtonView: View {
 }
 
 #Preview {
-    FloatingButtonView(actions:
-                        [ FloatingMenuAction(symbol: "sun.max") { print("sun") },
-                          FloatingMenuAction(symbol: "moon") { print("moon") }
-                        ]
-    )
+    FloatingButtonView {
+        FloatingMenuAction(symbol: "sun.max") { print("sun") }
+        FloatingMenuAction(symbol: "moon") { print("moon") }
+    }
 }

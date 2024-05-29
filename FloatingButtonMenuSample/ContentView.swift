@@ -17,11 +17,23 @@ struct ContentView: View {
                 .navigationTitle("Floating Button Menu")
         }
         .overlay {
-            FloatingButtonView(actions:
-                                [ FloatingMenuAction(symbol: "moon"),
-                                  FloatingMenuAction(symbol: "sun.max")
-                                ]
-            )
+            FloatingButtonView {
+                FloatingMenuAction(symbol: "doc.on.doc") {
+                    print("copy action")
+                }
+                FloatingMenuAction(symbol: "scissors") {
+                    print("cut action")
+                }
+                FloatingMenuAction(symbol: "circle", foregroundColor: .pink) {
+                    backgroundColor = .pink
+                }
+                FloatingMenuAction(symbol: "circle", foregroundColor: .indigo) {
+                    backgroundColor = .indigo
+                }
+                FloatingMenuAction(symbol: "circle", foregroundColor: .mint) {
+                    backgroundColor = .mint
+                }
+            }
         }
     }
 }

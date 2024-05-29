@@ -13,3 +13,10 @@ struct FloatingMenuAction: Identifiable {
     var foregroundColor: Color = .primary
     var action: (() -> Void)?
 }
+
+@resultBuilder
+struct FloatingMenuActionResultBuilder {
+    static func buildBlock(_ components: FloatingMenuAction...) -> [FloatingMenuAction] {
+        components.map { $0 }
+    }
+}
