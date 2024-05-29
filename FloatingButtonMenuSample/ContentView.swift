@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var backgroundColor: Color = .yellow
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            SampleListView(backgroundColor: backgroundColor)
+                .toolbarTitleDisplayMode(.inline)
+                .navigationTitle("Floating Button Menu")
         }
-        .padding()
     }
 }
 
